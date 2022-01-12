@@ -2,6 +2,7 @@
 [ TR ] Dosya yönetim sistemi
 
 * [!!] pip install -r requirements.txt yazip gereken kütüphaneleri otomatik olarak kurabilirsiniz.
+* [!!] sisteminize cURL kurmayı da unutmayın.
 * [!!] çalıştırmadan önce rget.py içine kullanıcı adı ve şifrenizi "tirnak icinde" yazmayı unutmayın
 
  - Serverda bulunan dosyalarınızı tek tıkla cihazınıza indirebilirsiniz.
