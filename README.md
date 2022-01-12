@@ -6,7 +6,7 @@
   - wget  => pip3 install wget <br>
   - python <br>
 
-<h2> [!!] çalıştırmadan önce config.txt dosyasının içine şifrenizi yazmayı unutmayın.</h2>
+<h2> [!!] çalıştırmadan önce rget.py içine şifrenizi "tirnak icinde" yazmayı unutmayın.</h2>
 
 <h2>rget</h2>
 <h6>Kullanımı : python3 rget.py "kullanici_adi"  "dosya" </h6>
