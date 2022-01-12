@@ -1,6 +1,6 @@
 import sys,os,wget
 username = "kullanıci adi"			# kullanici adinizi buraya "tirnak icinde" girin.
-password = "sifre"	# kullanici sifrenizi buraya "tirnak icinde" girin.
+password = "sifre"				# kullanici sifrenizi buraya "tirnak icinde" girin.
 host="https://melihkaragoz.com/fileserver"
 try:
 	param,file = sys.argv[1],sys.argv[2]
