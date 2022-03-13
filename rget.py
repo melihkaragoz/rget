@@ -1,7 +1,7 @@
 import sys,os,wget
-username = "kullanıci adi"			# kullanici adinizi buraya "tirnak icinde" girin.
-password = "sifre"				# kullanici sifrenizi buraya "tirnak icinde" girin.
-host="https://melihkaragoz.com/fileserver"
+username = "kullanici_adi"			# kullanici adinizi buraya "tirnak icinde" girin.
+password = "sifre"	# kullanici sifrenizi buraya "tirnak icinde" girin.
+host="https://mefasis.com/fileserver"
 try:
 	param,file = sys.argv[1],sys.argv[2]
 	new_dir,sp_ch,list_dir,dest_dir="","","",""
@@ -17,7 +17,7 @@ try:
 	elif(param == "--get"):
 		getFile=sys.argv[2]
 		if(getFile != "/"): sp_ch = "/"
-		file_name = wget.download("https://melihkaragoz.com/fileserver/uploads/"+username+sp_ch+getFile)
+		file_name = wget.download(host+"/uploads/"+username+sp_ch+getFile)
 		print("\n"+file_name+" adli dosya indirildi.")
 	elif(param == "--push"):
 		dest_dir="&destdir="+sys.argv[3]
@@ -26,8 +26,8 @@ try:
 		else: raise ValueError()
 except:
 	print("""\n Kullanim : \n \n \
-rpush --push <dosya_adi>  <hedef_dizin>        : belirtilen dosyayi sisteme yukler.\n \
-rpush --push <dosya_adi>  <hedef_dizin>        : <hedef_dizin> adinda bir klasor olusturup dosyayi icine koyar.\n \
-rpush --create <yeni_klasor>        		: <yeni_klasor> adinda bir klasor olusturur.\n \
-rpush --list /<listelenecek_dizin>	    	: belirtilen dizindeki dosyaları ve klasorleri listeler\n \
+rget --push <dosya_adi>  <hedef_dizin>        : belirtilen dosyayi sisteme yukler.\n \
+rget --push <dosya_adi>  <hedef_dizin>        : <hedef_dizin> adinda bir klasor olusturup dosyayi icine koyar.\n \
+rget --create <yeni_klasor>        		: <yeni_klasor> adinda bir klasor olusturur.\n \
+rget --list /<listelenecek_dizin>	    	: belirtilen dizindeki dosyaları ve klasorleri listeler\n \
 	""")
